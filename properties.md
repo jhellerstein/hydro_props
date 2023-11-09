@@ -63,3 +63,17 @@ We say that a dataflow graph composed of streams and operators can be *freely re
 - Deterministic in all properties
 - Preserves $P$ **???**
 - Output is none of $M,@,X$
+- 
+## Algebraic Upgrades
+- Looking at this lattice data model and the three ACI properties, associativity commutativity, and idempotence, a natural question is "what classes of programs can fit into this model?"
+- This looks like a question of computability - we can achieve coordination-free execution if and only if we are ACI, and therefore only functions that are ACI can be computed coordination-free - but this is wrong!
+- Some of these properties can be enforced programmatically, such as idempotence and commutativity, so the presence of those properties is irrelevant to whether a function can be computed coordination-free.
+- Instead, the question becomes "how much metadata do we need to enforce the properties we need in the distributed setting?".
+- We have now converted what looks like a computability question into a question of space complexity - do we need constant metadata? metadata linear in the number of replicas? metadata linear in the number of messages?
+- The study of algebraic properties that allow for certain transformations and correctness guarantees has been popular outside of distributed systems recently as well e.g. semi-ring provenance, incremental view maintenance, datalog^o, dbsp, different kinds of monoids in automata theory.
+- open questions:
+- catalogue the useful algebraic properties in data systems
+- what is the minimal amount of metadata needed to enforce these properties?
+- what properties are impossible to enforce via metadata (lower bounds)
+- We call this process of tagging on metadata needed to enforce any missing properties "algebraic upgrades".
+- We are interested in building an optimizer for arbitrary programs that can tag on the minimal metadata necessary to guarantee invariants such as consistency in different settings. 
