@@ -46,7 +46,7 @@ We say that a dataflow graph composed of streams and operators can be *freely re
 
 > **Lemma: Semi-Lattice operators are monotonic**: If an output stream $S_o$ of an operator $\Omega$ is associative, commutative and idempotent w.r.t. all inputs, then the type $T_o$ is constrained to be isomorphic to the join semi-lattice $L_{(V_o, \Omega)}$, and hence is monotonic. *(Standard lattice theory.)*
 
-> **Lemma: Monotonic operators are freely replicable**: If the inputs of a dataflow graph have deterministic values $V$, and each output stream $S_j$ of the graph is monotonic with respect to some fixed partial order $O_j, the graph is freely replicable. *(Follows from CALM Theorem, but would be nice to show inductively via local properties on operators/edges in the graph, perhaps induction in expression/path length starting with a single "source" op. Alternatively we could just argue that Semi-Lattice operators are freely replicable and leave it at that, but lines up less well with bidirectionality of CALM).*
+> **Theorem (unidirectional CALM): Monotonic operators are freely replicable**: If the inputs of a dataflow graph have deterministic values $V$, and each output stream $S_j$ of the graph is monotonic with respect to some fixed partial order $O_j, the graph is freely replicable. *(Follows from CALM Theorem, but would be nice to show inductively via local properties on operators/edges in the graph, perhaps induction in expression/path length starting with a single "source" op. Alternatively we could just argue that Semi-Lattice operators are freely replicable and leave it at that, but lines up less well with bidirectionality of CALM).*
 
 ## Example Operators of Interest
 ### source_iter
