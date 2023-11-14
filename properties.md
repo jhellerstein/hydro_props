@@ -1,8 +1,8 @@
 ## Stream Properties
 Stream $S$ characterized by properties: $(V, O, P, T, M, @, X)$
 - $V$: a multiset of values
-- $O$: a total *order* of arrival
-- $P$: a *parenthesization* (batching).
+- $O$: a named total *order* of arrival
+- $P$: a named *parenthesization* (batching).
 - $T$: a *type*
 - $M$: if $T$ has a corresponding partial order $\le_T$, the *monotonicity* relationship between $\le_T$ and $O$ (monotonic, anti-monotonic, non-monotonic)
 - $@$: if each item $x$ in the stream is an *atom* of $T$, i.e. $\forall x \in S y \in T, \; \; y \le_T x \implies y = \bot$. If true, we say the stream is *atomistic*.
