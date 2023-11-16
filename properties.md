@@ -6,7 +6,7 @@ Stream $S$ characterized by properties: $(V, O, P, T, M, @, X)$
 - $T$: a *type*
 - $M$: if $T$ has a corresponding partial order $\le_T$, the *monotonicity* relationship between $\le_T$ and $O$ (monotonic, anti-monotonic, non-monotonic)
 - $@$: if each item $x$ in the stream is an *atom* of $T$, i.e. $\forall x \in S y \in T, \; \; y \le_T x \implies y = \bot$. If true, we say the stream is *atomistic*.
-- $X$: if all pairs of items in the stream are *exclusive* in $T$: $\forall x, y \in S z \in T, \;\; (z \le_T x \wedge z \le_T y) \implies z = \bot$. If true, we say the stream is *exclusive*.
+- $X$: We say the stream is *exclusive* in $T$ if $T$ is a full lattice $(S, \sqcup, \sqcap, \top, \bot)$ and $\forall x, y \in S, x \sqcap y = \bot$.
 
 > **Observation**: For atomistic streams, exclusivity is equivalent to $V$ being duplicate-free. 
 
