@@ -69,7 +69,7 @@ We say that a dataflow graph composed of streams and operators can be *freely re
 - Deterministic in all properties
 - Preserves $P$ **More like a morphism**
 - Output is none of $M,@,X$
-- 
+
 ## Algebraic Upgrades
 - Looking at this lattice data model and the three ACI properties, associativity commutativity, and idempotence, a natural question is "what classes of programs can fit into this model?"
 - This looks like a question of computability - we can achieve coordination-free execution if and only if we are ACI, and therefore only functions that are ACI can be computed coordination-free - but this is wrong!
