@@ -8,6 +8,8 @@ Stream $S$ characterized by properties: $(V, O, P, T, M, @, X)$
 - $@$: if each item $x$ in the stream is an *atom* of $T$, i.e. $\forall x \in S y \in T, \; \; y \le_T x \implies y = \bot$. If true, we say the stream is *atomistic*.
 - $X$: We say the stream is *exclusive* in $T$ if $T$ is a full lattice $(S, \sqcup, \sqcap, \top, \bot)$ and $\forall x, y \in S, x \sqcap y = \bot$.
 
+> **FIXME**: The above definition of monotonicity does not fit the one we use in most CALM discussions. E.g. the `filter` or relational `selection` op is monotonic, even though the streams going in and out of it may not be ordered in any meaningful way.
+
 > **Observation**: For atomistic streams, exclusivity is equivalent to $V$ being duplicate-free. 
 
 > **Observation**: Monotonic $\implies$ Non-Atomistic (and Atomistic $\implies$ Non-Monotonic)
