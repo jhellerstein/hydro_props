@@ -7,6 +7,7 @@
 - *Cycles with Fixpoints*: POPS
     - with Incremental evaluation: Complete, Distributive Dioid
 - *Operator reordering*: commutativity/distributivity of ops
+- *The streaming vs barrier thing that MapReduce got wrong*
 
 ## Properties and axioms
 ### Stream properties
